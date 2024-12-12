@@ -27,7 +27,7 @@ async function addStampAnnotation(doc) {
     await stamper.stampText(doc, "Reviewed by J.Doe", pages);
 
     // Add an image stamp
-    const image = await PDFNet.Image.createFromFile(doc, './draft-stamp.png');
+    const image = await PDFNet.Image.createFromFile(doc, './draft-stamp.png'); // Image not included in this repo, bring your own.
     await stamper.setOpacity(0.1); // 10% opacity
     await stamper.stampImage(doc, image, pages); // Same page range
 }
